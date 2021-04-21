@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "simulacro-parcial": {
+      "hosting": {
+        "proy4": [
+          "simulacro-parcial"
+        ]
+      }
+    }
+  }
+}

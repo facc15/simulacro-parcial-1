@@ -1,0 +1,24 @@
+<h2>Crear pelicula</h2>
+
+<div class="container" *ngIf="peliculaNueva">
+    Nombre:<input type="text" [(ngModel)]="peliculaNueva.nombre">
+    <br><br>
+    Fecha: <input type="text" [(ngModel)]="peliculaNueva.fechaEstreno">
+    <br><br>
+    Espectadores: <input type="text" [(ngModel)]="peliculaNueva.cantidadPublico">
+    <br><br>
+    Tipo:<select name="select" [(ngModel)]="peliculaNueva.tipo">
+        <option value="terror">Terror</option>
+        <option value="comedia">Comedia</option>
+        <option value="amor">Amor</option>
+        <option value="otros">Otros</option>
+      </select>
+      <br><br>
+    Foto: 
+        <input type="file" name="imagen" [(ngModel)]="peliculaNueva.fotoPelicula">
+      <br><br>
+    <button class="btn btn btn-secondary" (click)="guardarNuevaPelicula()">Crear</button>
+</div>
+<div *ngIf="!peliculaNueva">
+    <button class="btn btn btn-secondary" (click)="hacerNuevaPelicula()">Nueva Pelicula</button>
+</div>
